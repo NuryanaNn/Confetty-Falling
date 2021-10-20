@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/all.css">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Hover</title>
+</head>
+
+<body>
+    <section>
+        <h2>Confetty Falling</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde porro laborum asperiores error, accusamus
+            neque! Itaque eum incidunt mollitia, quam, architecto laborum suscipit perferendis, hic dolorem iusto quo
+            necessitatibus blanditiis?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem fugit commodi
+            quo repellat veniam nobis enim, totam recusandae cupiditate? Expedita tempora ad hic reprehenderit in
+            adipisci alias quae suscipit repudiandae.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nihil consequuntur, quo praesentium
+            ducimus itaque consectetur tempora velit aliquam amet soluta perferendis, porro deleniti. Quaerat fuga omnis
+            amet totam illum!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum vel repellendus cum aspernatur sapiente eos
+            iste doloremque deleniti quasi corrupti officiis provident praesentium, unde reprehenderit nisi veritatis
+            nihil incidunt impedit.
+        </p>
+        <button class="btn">Click Here</button>
+
+        <div class="popup">
+            <h2>Your Content</h2>
+            <b class="close">x</b>
+        </div>
+    </section>
+
+    <canvas id="my-canvas"></canvas>
+
+    <script src="index.min.js"></script>
+    <script>
+        let btn = document.querySelector('.btn');
+        let popup = document.querySelector('.popup');
+        let close = document.querySelector('.close');
+        let confe = document.querySelector('#my-canvas');
+        btn.onclick = function () {
+            popup.classList.add('active');
+            confe.classList.add('active');
+        }
+        close.onclick = function () {
+            popup.classList.remove('active');
+            confe.classList.remove('active');
+        }
+
+
+        var confettiSettings = { target: 'my-canvas' };
+        var confetti = new ConfettiGenerator(confettiSettings);
+        confetti.render();
+
+
+    </script>
+
+</body>
+
+</html>
